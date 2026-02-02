@@ -242,7 +242,7 @@ useGSAP(()=>{
          <ReviewCard src='https://kopisaigon.com/wp-content/uploads/2025/09/Grey-Minimalist-Photography-Blog-YouTube-Channel-Art-1024x576.jpg.webp' num='242 +' desc='Kopi Saigon outlets nationwide'/>
          <ReviewCard src='https://kopisaigon.com/wp-content/uploads/2025/09/total-barista-1024x578.jpg.webp' num='720+' desc='Kopi Saigon barista nationwide'/>
          <ReviewCard src='https://kopisaigon.com/wp-content/uploads/2025/09/kopi-saigon-cup-sold-1024x578.jpg.webp' num='10000000'  desc='Kopi Saigon cup sold per year'/>
-         <ReviewCard src='https://kopisaigon.com/wp-content/uploads/2025/09/img4-2.png.webpbp' num='100'  desc='Customer Satisfaction'/>
+         <ReviewCard src='https://kopisaigon.com/wp-content/uploads/2025/09/img4-2.png.webp' num='100'  desc='Customer Satisfaction'/>
 </div>
      
 
