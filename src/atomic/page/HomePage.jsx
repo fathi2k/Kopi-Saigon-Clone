@@ -5,6 +5,7 @@ import PackageCard from '../organism/Package';
 import Br1 from '../organism/Br1';
 import Footer from '../organism/Footer.jsx';
 import ReviewSection from '../organism/ReviewSection.jsx';
+import LastSection from '../organism/LastSection.jsx';
 
 
 function HomePage() {
@@ -24,7 +25,7 @@ function HomePage() {
       
       <ReviewSection/>
 
-      
+      <LastSection/>
 
       <Footer/>
       
