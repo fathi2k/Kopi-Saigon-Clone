@@ -6,7 +6,7 @@ const Header = () => {
     <>
     
     
-    <div className='bg-yellow-500'>
+    <div className='bg-kopi-saigon'>
             
             
               <div className='flex justify-center items-center gap-[20px]'>
