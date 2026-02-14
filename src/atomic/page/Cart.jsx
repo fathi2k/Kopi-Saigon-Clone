@@ -10,11 +10,27 @@ const Cart = ({title}) => {
 
 
     <div className='bg-red-200 flex justify-center flex-col items-center'>
-          <h1>Checkout</h1>
+
+    {/* kiri */}
+
+
+
+
+
+
+
+
+      {/* kanan */}
+
+      <div className='bg-kopi-saigon mt-[5%] p-4 rounded-2xl'>
+                <h1 className='text-[60px] font-bold text-white'>Checkout</h1>
+
 
 
           <TableCart title ={title}/>
 
+      </div>
+        
     </div>  
 
 </>

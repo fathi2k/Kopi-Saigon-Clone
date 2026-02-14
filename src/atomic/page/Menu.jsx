@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useEffectEvent, useState } from 'react'
 import ButtonMenu from '../atoms/Buttons/ButtonMenu'
 import Navbar from '../organism/Navbar'
 import CoffeMenuTable from '../organism/CoffeMenuTable'
@@ -13,13 +13,37 @@ const Menu = () => {
   const coffeeRef = useRef(null)
   const nonCoffeeRef = useRef(null)
   const frappeRef = useRef(null)
-  const[ selectedTitlee,setSelectedTitle] = useState([])
+
+  const[ selectedCoffee,setSelectedCoffee] = useState([]);
+  
   const [searchParams,setSearchParams] = useSearchParams('');
 
-  const handleSelectedCoffee = (title)=>{
-    setSelectedTitle(title)
-      console.log(selectedTitlee)
+  const handleSelectedCoffee = (items)=>{
+  
+      const updatedSelected = [...selectedCoffee,items]
+      setSelectedCoffee(updatedSelected)
+
+      //save local//
+      localStorage.setItem('dataCofee',JSON.stringify(updatedSelected));
+    console.log(updatedSelected)
+
+      
   }
+
+
+  useEffect(()=>{
+      const data =  localStorage.getItem('dataCofee')
+      if (data){
+    const updatedData = JSON.parse(data) //tukar daripada string kpd object
+
+    
+      if (updatedData.length > 0){
+            setSelectedCoffee(updatedData)
+        }
+      }
+
+      console.log(selectedCoffee)
+  },[])
 
 
 //   const autoScrolling = (ref)=>{

@@ -216,7 +216,7 @@ useGSAP(()=>{
 
     <>
     
-      <div className='bg-yellow-400'>
+      <div className='bg-kopi-saigon'>
             
             <div className='flex justify-center p-20 '>
               <div className='ayat1'><h1 className='text-red-950 font-bold h-[160px] w-[570px] text-[80px] '>TIADA HARI, TANPA KOPI</h1></div>

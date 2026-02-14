@@ -1,26 +1,111 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CoffeCard from '../molecules/CoffeCard'
-
+import { apiData } from '../../data/apiDataKopi';
 
 const CoffeMenuTable = ({coffeeRef,nonCoffeeRef,frappeRef,selectedTitle}) => {
+
+       const [dataKopi,setDataKopi] = useState([]);
+       const coffeeSeries = dataKopi.filter((para)=>para.category === 'coffee');
+       const nonCoffeeSeries = dataKopi.filter((para)=>para.category === 'non-coffee');
+       const frapeeSeries = dataKopi.filter((para)=>para.category === 'frappe');
+
+useEffect(()=>{
+
+const handleData = async ()=>{
+       const data = await apiData();
+       setDataKopi(data)
+       console.log(data)
+       setDataKopi(data)
+}
+
+handleData()
+},[])
 
 
 
 
   return (
 
+<div>
 
-      <div className=''>
+       {/* Coffee */}
+
+ <div ref={coffeeRef} className='  flex justify-center '>
+
+       <div  className='flex flex-col border-b-1 pb-[5%]'>
+   <h1 className='font-bold text-[50px] text-amber-800'>COFFEE SERIES</h1>
+              <div className=' flex grid grid-cols-4'>
+ {coffeeSeries.map((para)=>{
+                  return   <CoffeCard key={para.id} src={para.images} title={para.name} onClick={()=>selectedTitle(para)} className='flex flex-col items-center gap-2  hover:bg-gray-600 transition-all hover:text-white ' />
+              })}                     
+              </div>
+             
+
+       </div>
+    
+       </div>
 
 
-            {/* menu 1 */}
+       {/* non Coffee */}
 
-<div ref={coffeeRef} className=''>
+
+<div ref={coffeeRef} className='  flex justify-center'>
+
+       <div  className=' flex flex-col border-b-1 pb-[5%]'>
+   <h1 className='font-bold text-[50px] text-amber-800'>NON COFFEE SERIES</h1>
+              <div className=' flex grid grid-cols-4'>
+ {nonCoffeeSeries.map((para)=>{
+                  return   <CoffeCard key={para.id} src={para.images} title={para.name} onClick={()=>selectedTitle(para)} className='flex flex-col items-center gap-2  hover:bg-gray-600 transition-all hover:text-white ' />
+              })}                     
+              </div>
+             
+
+       </div>
+    
+       </div>
+
+
+
+       {/* frappee */}
+
+<div ref={coffeeRef} className=' flex justify-center'>
+
+       <div  className=' flex flex-col  pb-[5%]'>
+   <h1 className='font-bold text-[50px] text-amber-800'>FRAPEE</h1>
+              <div className=' flex grid grid-cols-4'>
+ {frapeeSeries.map((para)=>{
+                  return   <CoffeCard key={para.id} src={para.images} title={para.name} onClick={()=>selectedTitle(para)} className='flex flex-col items-center gap-2  hover:bg-gray-600 transition-all hover:text-white ' />
+              })}                     
+              </div>
+             
+
+       </div>
+    
+       </div>
+      
+
+
+</div>
+      
+
+  )
+}
+
+export default CoffeMenuTable
+
+
+
+{/*  Menu 1*/}
+
+
+
+
+ {/* <div ref={coffeeRef} className=''>
 
            <h1 className='font-bold text-[50px] text-amber-800 '>COFFEE SERIES</h1>
               
               <div className='flex  gap-3 border-b-1 pb-3' >
-                     <CoffeCard onClick={()=> selectedTitle('Kopi Saigon')} src='../../public/image/asset/menu-kopi/coffee-series/saigon1.webp' title='Kopi Saigon'/>
+                     <CoffeCard onClick={()=> selectedTitle(para.name)} src={para.images} title='Kopi Saigon'/>
               <CoffeCard   src='../../public/image/asset/menu-kopi/coffee-series/latte.webp' title='Kopi Latte' onClick={()=> selectedTitle('Kopi Latte')} />
               <CoffeCard   onClick={()=> selectedTitle('Kopi buttercream')} src='../../public/image/asset/menu-kopi/coffee-series/buttercream.webp' title='Kopi buttercream'/>
               <CoffeCard   onClick={()=> selectedTitle('Kopi Hitam')} src='../../public/image/asset/menu-kopi/coffee-series/hitam.webp' title='Kopi Hitam'/>
@@ -37,12 +122,12 @@ const CoffeMenuTable = ({coffeeRef,nonCoffeeRef,frappeRef,selectedTitle}) => {
               </div>
 
 </div>
-
+ */}
 
 
 
 {/* Menu 2 */}
-
+{/* 
 <div ref={nonCoffeeRef} className='b'>
 
            <h1 className='font-bold text-[50px] text-amber-800 max-w-[500px]'>NON COFFEE SERIES
@@ -55,13 +140,13 @@ MATCHA</h1>
 
               </div>
 
-</div>
+</div> */}
 
 {/* Menu 3 */}
 
 
 
-<div className=''>
+{/* <div className=''>
 
            <h1 className='font-bold text-[50px] text-amber-800 '>CHOCOLATE</h1>
               
@@ -73,14 +158,14 @@ MATCHA</h1>
 
               </div>
 
-</div>
+</div> */}
 
 
 
 {/* Menu 4 */}
 
 
-<div className=''>
+{/* <div className=''>
 
            <h1 className='font-bold text-[50px] text-amber-800 '>VIETNAMESE TEA</h1>
               
@@ -94,11 +179,11 @@ MATCHA</h1>
 
               </div>
 
-</div>
+</div> */}
 
 
 {/* Menu 5 */}
-<div className=''>
+{/* <div className=''>
 
            <h1 className='font-bold text-[50px] text-amber-800'>TARO</h1>
               
@@ -110,13 +195,13 @@ MATCHA</h1>
 
               </div>
 
-</div>
+</div> */}
 
 
 
 {/* Menu 6 */}
 
-
+{/* 
 <div ref={frappeRef} className=''>
 
            <h1 className='font-bold text-[50px] text-amber-800 '>FRAPPE SERIES</h1>
@@ -138,16 +223,13 @@ MATCHA</h1>
 
               </div>
 
-</div>
+</div> */}
 
 
 
 
            
              
-          </div>
+       //    </div>
 
-  )
-}
 
-export default CoffeMenuTable

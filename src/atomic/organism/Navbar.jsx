@@ -5,7 +5,7 @@ import Navkanan from '../molecules/Navkanan'
 
 const Navbar = () => {
   return (
-    <div className=' bg-amber-400 flex justify-center items-center p-2'>
+    <div className=' bg-kopi-saigon flex justify-center items-center p-2'>
             <Navkiri/>
             <Navtengah />  
             <Navkanan/>
