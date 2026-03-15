@@ -1,0 +1,218 @@
+[
+  {
+    "id":"1",
+    "name":"Kopi Saigon",
+    "price":"RM8.00",
+    "type":"Hot",
+    "images": "https://kopisaigon.com/wp-content/uploads/2025/12/saigon.webp",
+    "category" : "coffee"
+  },
+  {
+    "id":"2",
+    "name":"Kopi Latte",
+    "price":"RM10.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/latte.webp",
+      "category" : "coffee"
+  },
+  {
+    "id":"3",
+    "name":"Kopi buttercream",
+    "price":"RM10.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/buttercream.webp",
+      "category" : "coffee"
+  },
+  {
+    "id":"4",
+    "name":"Kopi Hitam",
+    "price":"RM12.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/hitam.webp",
+      "category" : "coffee"
+  },
+  {
+    "id":"5",
+    "name":"Kopi Mocha",
+    "price":"RM9.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/mocha.webp",
+      "category" : "coffee"
+  },
+  {
+    "id":"6",
+    "name":"Kopi Vanilla",
+    "price":"RM11.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/vanilla.webp",
+      "category" : "coffee"
+  },
+  {
+    "id":"7",
+    "name":"Kopi Caramel",
+    "price":"RM10.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/caramel.webp",
+      "category" : "coffee"
+  },
+  {
+    "id":"8",
+    "name":"Kopi Butterscotch",
+    "price":"RM13.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/butterscotch.webp",
+      "category" : "coffee"
+  },
+  {
+    "id":"9",
+    "name":"Matcha Original",
+    "price":"RM9.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/Matcha-ori.webp",
+    "category": "non-coffee"
+  },
+  {
+    "id":"10",
+    "name":"Matcha Strawberry",
+    "price":"RM12.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/matcha-strawberry.webp",
+    "category": "non-coffee"
+  },
+  {
+    "id":"11",
+    "name":"Matcha Coconut",
+    "price":"RM11.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/Matcha-Coconut.webp",
+    "category": "non-coffee"
+  },
+  {
+    "id":"12",
+    "name":"Chocolate Original",
+    "price":"RM12.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/chocolate-ori.webp",
+    "category": "non-coffee"
+  },
+  {
+    "id":"13",
+    "name":"Chocolate Caramel",
+    "price":"RM13.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/chocolate-caramel.webp",
+    "category": "non-coffee"
+  },
+  {
+    "id":"14",
+    "name":"Chocolate Strawberry",
+    "price":"RM10.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/chocolate-strawberry.webp",
+    "category": "non-coffee"
+  },
+  {
+    "id":"15",
+    "name":"Peach tea",
+    "price":"RM11.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/Peach-tea.webp",
+    "category": "non-coffee"
+  },  
+  {
+    "id":"16",
+    "name":"Milk Tea",
+    "price":"RM14.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/milk-tea.webp",
+    "category": "non-coffee"
+  },
+  {
+    "id":"17",
+    "name":"Jasmine Milk Tea",
+    "price":"RM10.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/milk-tea.webp",
+    "category": "non-coffee"
+  } ,
+  {
+    "id":"18",
+    "name":"Coconut Milk Tea",
+    "price":"RM11.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/milk-tea.webp",
+    "category": "non-coffee"
+  },
+  {
+    "id":"19",
+    "name":"Creamy Taro",
+    "price":"RM12.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/creamy-taro.webp",
+    "category": "non-coffee"
+  },
+  {
+    "id":"20",
+    "name":"Matcha Taro",
+    "price":"RM12.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/matcha-taro.webp",
+    "category": "non-coffee"
+  },
+  {
+    "id":"21",
+    "name":"Strawberry Milkshake",
+    "price":"RM13.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/strawberry-frappe.webp",
+    "category":"frappe"
+  },
+  {
+    "id":"22",
+    "name":"Kopi Saigon",
+    "price":"RM11.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/saigon-frappe.webp",
+    "category":"frappe"
+  },
+  {
+    "id":"23",
+    "name":"Chocolate",
+    "price":"RM12.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/chocolate-frappe.webp",
+    "category":"frappe"
+  },
+  {
+    "id":"24",
+    "name":"Matcha",
+    "price":"RM13.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/matcha-frappe.webp",
+    "category":"frappe"
+  },
+  {
+    "id":"25",
+    "name":"Kopi Butterscotch",
+    "price":"RM14.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/butterscotch-frappe-1024x1024.webp",
+    "category":"frappe"
+  },
+  {
+    "id":"26",
+    "name":"Kopi Caramel",
+    "price":"RM15.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/caramel-frappe.webp",
+    "category":"frappe"
+  },
+  {
+    "id":"27",
+    "name":"Taro",
+    "price":"RM13.00",
+    "type":"Hot",
+    "images":"https://kopisaigon.com/wp-content/uploads/2025/12/taro-frappe.webp",
+    "category":"frappe"
+  }
+]
