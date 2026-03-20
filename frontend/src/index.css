@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 
 @theme {
   --color-kopi-saigon : #E6B549;
+ --font-archivo: 'Archivo', sans-serif;
 }
 
 
@@ -10,3 +12,5 @@
 #map .sm_label {
   display: block !important;
 }
+
+

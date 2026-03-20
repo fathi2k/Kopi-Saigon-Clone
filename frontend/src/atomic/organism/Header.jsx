@@ -1,7 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
+import gsap from 'gsap'
+
+
+
 
 const Header = () => {
+
+
+
+useEffect(()=>{
+
+  gsap.to('.box-atas',{
+  scale : 1.2,
+  x : -20,
+  repeat : -1,
+  duration : 1.2,
+  yoyo : true,
+})
+
+
+},[])
+
+
+
+
+
   return (
     <>
     
@@ -9,14 +33,24 @@ const Header = () => {
     <div className='bg-kopi-saigon'>
             
             
-              <div className='flex justify-center items-center gap-[20px]'>
+              <div className='flex justify-center items-center gap-[20px] '>
+
+                <div className='flex flex-col gap-5'>
+
+                  <div>
+                    <button className='bg-[#8A4E21] text-white p-2 rounded-[5px] box-atas text-[15px] font-archivo w-[168px] h-[38px]'>Kopi Saigon Shop</button>
+                  </div>
+               
 
                 {/* page kiri */}
-              <div className='flex flex-col text-yellow-800 leading-tight'>
+              <div className='flex flex-col text-[#8A4E21] leading-tight'>
                     <h1 className='text-[34px] font-bold'>Kopi <span>kegemaran</span></h1>
                     <h1 className='text-[70px] max-w-[600px] font-bold'>FASHA SANDHA & AIDIL AZIZ</h1>
                     <p className='text-[16px]'>Outlet Owner MyTown</p>
               </div>
+
+
+                </div>
 
 
 
