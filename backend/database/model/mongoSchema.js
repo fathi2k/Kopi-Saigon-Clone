@@ -20,8 +20,11 @@ const dataKopiSchema = new mongoose.Schema({
 
 
 const dataUserSchema = new mongoose.Schema({
-  username : String,
-  password : String
+  firstName : String,
+  lastName : String,
+  email : String,
+  password : String,
+  
 })
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import CoffeCard from '../molecules/CoffeCard'
 import {  useEffect} from 'react'
-
+import { FaCartShopping } from "react-icons/fa6";
 
 import { IoRemoveCircleOutline } from "react-icons/io5";
 
@@ -145,7 +145,20 @@ setCartItem(updateCart)
                  
                   
 
-              ) : <td className='bg-kopi-saigon py-5  text-white text-[35px] font-bold' colSpan={4}>Cart Masing Kosong !</td> }
+              ) : <td className=' py-5 text-[#A6874C]  text-[35px] ' colSpan={4}>
+
+                  <div className='flex items-center justify-center gap-3'>
+                    <div>
+                       <h1>Cart Empty</h1>
+                    </div>
+                           
+                            <div className='pt-3'>
+                                  <FaCartShopping size={23}/>
+                            </div>
+                              
+                  </div>
+                
+              </td> }
               
 
                

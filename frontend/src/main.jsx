@@ -8,6 +8,7 @@ import HomePage from './atomic/page/HomePage.jsx'
 import LoginPage from './atomic/page/LoginPage.jsx'
 import Cart from './atomic/page/Cart.jsx'
 import OutletsPage from './atomic/page/OutletsPage.jsx'
+import RegisterPage from './atomic/page/RegisterPage.jsx'
 
 
 const routerr = createBrowserRouter([
@@ -30,6 +31,13 @@ const routerr = createBrowserRouter([
 
     path:'/login',
     element : <LoginPage/>
+
+  },{
+
+
+    path : '/register',
+    element : <RegisterPage/>
+
 
   },{
     path:'/cart',

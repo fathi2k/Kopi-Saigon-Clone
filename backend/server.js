@@ -44,7 +44,7 @@ app.get('/importJsonUser',(req,res)=>{
 
       
         dataUser.insertMany(data) //transfer to mongo//
-        res.json({message:'sdsd'}) //testing
+      
         
 })
 
@@ -75,21 +75,33 @@ app.get('/dataUser', async (req,res)=>{
 
 
 
-app.post('/dataUser',(req,res)=>{
-    const rawDataUser = req.body;
-   
+app.post('/dataUser', async (req,res)=>{
 
-    //bahagian file json//
-   const dataAsal = fs.readFileSync('./data/dataUser.json')
-   const dataJson = JSON.parse(dataAsal);
-   dataJson.push(rawDataUser);
 
-   //tulis baru dengan data baru//
-   fs.writeFileSync('./data/dataUser.json',JSON.stringify(dataJson,null,2))
+    const rawDataUser = await req.body;
+
+    const data = await  dataUser.create(rawDataUser);
+    
+
+    
+   res.json({message:'user Registered ✅'})
+
+//     //bahagian file json//
+//    const dataAsal = fs.readFileSync('./data/dataUser.json')
+//    const dataJson = JSON.parse(dataAsal);
+//    dataJson.push(rawDataUser);
+
+//    //tulis baru dengan data baru//
+//    fs.writeFileSync('./data/dataUser.json',JSON.stringify(dataJson,null,2))
+
+
+
+
+
 
    //send balik kat frontent
    
-   res.json({message:'Login Successfull ✅'})
+//    res.json({message:'Login Successfull ✅'})
 })
 
 
