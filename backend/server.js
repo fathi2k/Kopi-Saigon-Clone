@@ -3,6 +3,8 @@ import cors from 'cors';
 import fs from 'fs'
 import { mongoConnect } from "./database/connection/mongoConnect.js";
 import { dataKopi,dataUser } from "./database/model/mongoSchema.js";
+import bcrypt from 'bcrypt';
+
 const app = express();
 app.use(express.json());
 app.use(cors())
@@ -24,6 +26,7 @@ app.get('/',(req,res)=>{
 //import data dari json kepada mongodb//
 
 //data kopi
+
 app.get('/importJsonKopi',async (req,res)=>{
      
     const rawData = fs.readFileSync('./data/dataKopi.json');
@@ -44,9 +47,13 @@ app.get('/importJsonUser',(req,res)=>{
 
       
         dataUser.insertMany(data) //transfer to mongo//
+
+        
       
         
 })
+
+
 
 
 // ---------------DISPLAY------------------------///
@@ -77,19 +84,37 @@ app.get('/dataUser', async (req,res)=>{
 
 app.post('/dataUser', async (req,res)=>{
 
+  
 
-    const rawDataUser = await req.body;
 
-    const data = await  dataUser.create(rawDataUser);
+
+    const {firstName,lastName,email,password,confirmPassword} = await req.body;
+
+
+    
+
+    const passwordHashed = await bcrypt.hash(password,11);  //hash password//
+
+    const data = await  dataUser.create({
+        firstName ,
+        lastName,
+        email,
+        password : passwordHashed, //password hash simpan
+        confirmPassword
+    });
     
 
     
    res.json({message:'user Registered ✅'})
 
+
+
 //     //bahagian file json//
 //    const dataAsal = fs.readFileSync('./data/dataUser.json')
 //    const dataJson = JSON.parse(dataAsal);
 //    dataJson.push(rawDataUser);
+
+
 
 //    //tulis baru dengan data baru//
 //    fs.writeFileSync('./data/dataUser.json',JSON.stringify(dataJson,null,2))
@@ -102,6 +127,37 @@ app.post('/dataUser', async (req,res)=>{
    //send balik kat frontent
    
 //    res.json({message:'Login Successfull ✅'})
+})
+
+
+
+
+///login///
+
+
+
+app.post('/login', async (req,res)=>{
+
+    const {email,password} =  await req.body;
+
+  
+  //check dulu email sama ke tak//
+    const user = await dataUser.findOne({email});
+ if (!user) return res.json({ message: 'User not found' })
+   
+   
+ //check password sama ke tak dengan password HASH user//
+    const userSama = await bcrypt.compare(password,user.password)
+    if (!userSama) return res.status(401).json({ message:'Wrong password' });
+
+    res.json({message:'berjaya Login ✅'})
+
+
+    console.log(password);
+    console.log(user.password);
+    
+    
+
 })
 
 

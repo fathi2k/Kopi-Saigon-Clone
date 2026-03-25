@@ -135,39 +135,80 @@
 // export default LoginForm
 
 
-import React from 'react'
+import React, { useState } from 'react'
 import Input from '../atoms/input/Input'
 import Label from '../atoms/input/Label'
 
 const LoginForm = () => {
+
+  const [formData,setFormData] = useState({
+    email : '',
+    password : ''
+  })
+
+// submit data kepada backend//
+
+const handleSubmit =  (e)=>{
+
+  e.preventDefault()
+
+    fetch('http://localhost:3000/login',{
+      method : 'POST',
+      headers : {
+        'Content-Type' : 'application/json'
+      },
+      body : JSON.stringify({
+        email : formData.email,
+        password : formData.password
+      })
+    }).then(res => res.json()).then(data => alert(data.message))
+
+
+    
+
+
+
+  
+}
+
+
+
+
   return (
 
 
 
-    <form action="">
+    <form action="" onSubmit={handleSubmit}>
 
- <div className='flex flex-col gap-2'>
-            <h1 className='text-[50px]'>Login</h1>
+ <div className='flex flex-col gap-2 '>
+            <h1 className='text-[16px] mb-[24px]'>Login</h1>
 
           <Label>Username or Email Address</Label>
-            <Input className='border rounded-[5px] w-[400px] p-2 '/>
+            <Input onChange={(e)=> setFormData({...formData,email:e.target.value})} className='border rounded-[5px] w-[572px] p-2 ' type='email' value={formData.email}/>
 
 
 
              <Label>Password</Label>
-            <Input className='border rounded-[5px] w-[400px] p-2' type='password'/>
+            <Input onChange={(e)=>setFormData({...formData,password:e.target.value})} className='border rounded-[5px] w-[572px] p-2' type='password' value={formData.password}/>
 
 
-        <div className='flex justify-around'>
+        <div className='flex justify-between  px-3 border-b border-gray-300 py-5'>
           <div className='flex items-center gap-2'>
               <input type='checkbox' />
               <h1>Remember me.</h1>
           </div>
 
           <div>
-            <button className='bg-[#0BBC5C] p-2 text-white'>Login</button>
+            <button className='bg-[#0BBC5C] p-2 text-white '>Login</button>
           </div>
+
+
             
+        </div>
+
+
+        <div className='flex justify-center gap-2'>
+          <h1>Lost your password ? </h1> <span className='text-[#0BBC5C] '>Reset Password</span>
         </div>
 
             

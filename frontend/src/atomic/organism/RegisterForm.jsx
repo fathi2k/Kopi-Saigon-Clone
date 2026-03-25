@@ -72,6 +72,7 @@ const handleSubmit = async ()=>{
 
 
 
+
   {/* password  */}
 
 
@@ -86,11 +87,13 @@ const handleSubmit = async ()=>{
 
 
 
-        <div className='flex justify-around'>
+        <div className='flex justify-between '>
           <div className='flex items-center gap-2'>
               <input type='checkbox' />
               <h1>Remember me.</h1>
           </div>
+
+          
 
           <div >
             <button className='bg-[#0BBC5C] p-2 text-white'>Login</button>

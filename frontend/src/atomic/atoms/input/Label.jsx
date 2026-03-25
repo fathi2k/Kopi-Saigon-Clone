@@ -5,6 +5,7 @@ const Label = ({children,htmlFor}) => {
     <div>
          <label  className='' htmlFor={htmlFor}>{children}</label>
     </div>
+    
   )
 }
 

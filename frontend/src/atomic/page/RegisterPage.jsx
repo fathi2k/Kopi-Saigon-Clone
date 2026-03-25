@@ -14,6 +14,8 @@ const navigate = useNavigate();
 
 
   return (
+
+    
     <div className='bg-[#f0f0f0] h-screen flex justify-center items-center'>
 
 
