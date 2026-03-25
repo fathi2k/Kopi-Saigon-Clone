@@ -144,7 +144,12 @@ const LoginForm = () => {
   const [formData,setFormData] = useState({
     email : '',
     password : ''
-  })
+  });
+
+  const [errorMesej,setErrorMesej] = useState({
+    email : '',
+    password : ''
+  });
 
 // submit data kepada backend//
 
@@ -161,11 +166,27 @@ const handleSubmit =  (e)=>{
         email : formData.email,
         password : formData.password
       })
-    }).then(res => res.json()).then(data => alert(data.message))
+    }).then(res => res.json()).then(data => {
+
+      // if statement//
+
+      if (data.message === 'User not found'){
+        setErrorMesej({email:'Email anda salah ❌',password:''})
+      }else if (data.message === 'Wrong password'){
+        setErrorMesej({email: '', password:'Password anda salah ❌'})
+      }else{
+          setErrorMesej({email:'',password : ''})
+          alert(data.message)
+      }
 
 
-    
 
+
+
+    })
+
+
+  
 
 
   
@@ -183,11 +204,16 @@ const handleSubmit =  (e)=>{
  <div className='flex flex-col gap-2 '>
             <h1 className='text-[16px] mb-[24px]'>Login</h1>
 
+            {errorMesej.email && (
+                  <span className='bg-red-400 text-white border p-2'>{errorMesej.email}</span>
+            )}
           <Label>Username or Email Address</Label>
             <Input onChange={(e)=> setFormData({...formData,email:e.target.value})} className='border rounded-[5px] w-[572px] p-2 ' type='email' value={formData.email}/>
 
 
-
+ {errorMesej.password && (
+                  <span className='bg-red-400 text-white border p-2'>{errorMesej.password}</span>
+            )}
              <Label>Password</Label>
             <Input onChange={(e)=>setFormData({...formData,password:e.target.value})} className='border rounded-[5px] w-[572px] p-2' type='password' value={formData.password}/>
 
