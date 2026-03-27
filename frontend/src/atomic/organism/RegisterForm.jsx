@@ -48,19 +48,19 @@ const handleSubmit = async ()=>{
 <form action="" onSubmit={handleSubmit}>
 
 
-   <div className='flex flex-col gap-2'>
-            <h1 className='text-[50px]'>Register</h1>
+   <div className='flex flex-col gap-2 mt-6'>
+            <h1 className='text-[16px] font-bold'>Register</h1>
 
       <div className='flex gap-3'>
 
         <div>
            <Label>First Name</Label>
-            <Input type='text'  onChange={(e)=> setFormData({...formData,firstName:e.target.value})}  className='border w-[277px] p-2' value={formData.firstName} />
+            <Input type='text'  onChange={(e)=> setFormData({...formData,firstName:e.target.value})}  className='border w-[277px] p-2 rounded-[5px] border-gray-300' value={formData.firstName} />
         </div>
 
         <div>
            <Label>Last Name</Label>
-            <Input type='text'  onChange={(e)=> setFormData({...formData,lastName:e.target.value})} className='border w-[277px] p-2'value={formData.lastName}  />
+            <Input type='text'  onChange={(e)=> setFormData({...formData,lastName:e.target.value})} className='border w-[277px] p-2 rounded-[5px] border-gray-300'value={formData.lastName}  />
         </div>
 
       </div>
@@ -68,7 +68,7 @@ const handleSubmit = async ()=>{
 {/* email */}
 
             <Label>Email Address</Label>
-            <Input onChange={(e)=> setFormData({...formData,email:e.target.value})}   type='email' className='border w-[570px] p-2' value={formData.email}  />
+            <Input onChange={(e)=> setFormData({...formData,email:e.target.value})}   type='email' className='border w-[570px] p-2 rounded-[5px] border-gray-300' value={formData.email}  />
 
 
 
@@ -77,13 +77,13 @@ const handleSubmit = async ()=>{
 
 
           <Label>Password</Label>
-          <Input onChange={(e)=> setFormData({...formData,password:e.target.value})}  type='password' className='border w-[570px] p-2' value={formData.password} />
+          <Input onChange={(e)=> setFormData({...formData,password:e.target.value})}  type='password' className='border w-[570px] p-2 rounded-[5px] border-gray-300' value={formData.password} />
 
 
     {/* confirm password */}
 
         <Label> Confirm Password </Label>
-        <Input  onChange={(e)=> setFormData({...formData,confirmPassword:e.target.value})}  type='password' className='border w-[570px] p-2' value={formData.confirmPassword}/>
+        <Input  onChange={(e)=> setFormData({...formData,confirmPassword:e.target.value})}  type='password' className='border w-[570px] p-2 rounded-[5px] border-gray-300' value={formData.confirmPassword}/>
 
 
 

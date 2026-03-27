@@ -21,21 +21,21 @@ const navigate = useNavigate();
 
                 <div className='flex flex-col   items-center py-3 bg-white rounded-2xl'>
                           {/* logo */}
-                          <div >
+                          <div className='my-5'>
                             <img className='h-10' src="http://kopisaigon.com/wp-content/uploads/2025/08/cropped-LOGO-PNG-KOPI-SAIGON-__.png" alt="" />
                           </div>
 
-                          <div className='border-y border-gray-300 p-2 flex  w-[618px] justify-between '>
+                          <div className='border-y border-gray-300 p-2 flex  w-[618px] justify-between py-3'>
 
 
-                            <div className='flex gap-2'>
+                            <div className='flex gap-2 '>
 
-                                  <div onClick={()=>navigate('/')} className='flex border p-2 rounded-[5px]'>
+                                  <div onClick={()=>navigate('/')} className='flex border p-2 rounded-[5px] border-gray-300'>
                                       <AiOutlineHome size={20}/>
                                      
                                 </div>
 
-                                <div onClick={()=> navigate('/login')} className='flex border p-2 items-center cursor-pointer rounded-[5px]'>
+                                <div onClick={()=> navigate('/login')} className='flex border px-2 items-center cursor-pointer rounded-[5px] border-gray-300 gap-2'>
                                   <AiOutlineUserAdd />
                                   <h1>Login</h1>
                                 </div>

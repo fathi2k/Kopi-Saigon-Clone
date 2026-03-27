@@ -4,12 +4,14 @@ import fs from 'fs'
 import { mongoConnect } from "./database/connection/mongoConnect.js";
 import { dataKopi,dataUser } from "./database/model/mongoSchema.js";
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv';
 
 const app = express();
 app.use(express.json());
 app.use(cors())
 const myPort = 3000;
-
+dotenv.config();
 //connect mongo db //
 
 
@@ -138,7 +140,7 @@ app.post('/dataUser', async (req,res)=>{
 
 app.post('/login', async (req,res)=>{
 
-    const {email,password} =  await req.body;
+    const {email,password} =  req.body;
 
   
   //check dulu email sama ke tak//
@@ -150,11 +152,21 @@ app.post('/login', async (req,res)=>{
     const userSama = await bcrypt.compare(password,user.password)
     if (!userSama) return res.status(401).json({ message:'Wrong password' });
 
-    res.json({message:'berjaya Login ✅'})
+
+const token = jwt.sign(
+    {id:user._id,email:user.email},
+    process.env.JWT_SECRET,
+    {expiresIn : '7d'}
+)
 
 
-    console.log(password);
-    console.log(user.password);
+    res.json({message:'berjaya Login ✅',token})
+
+
+
+
+
+
     
     
 

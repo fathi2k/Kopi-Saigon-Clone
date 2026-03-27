@@ -208,14 +208,14 @@ const handleSubmit =  (e)=>{
                   <span className='bg-red-400 text-white border p-2'>{errorMesej.email}</span>
             )}
           <Label>Username or Email Address</Label>
-            <Input onChange={(e)=> setFormData({...formData,email:e.target.value})} className='border rounded-[5px] w-[572px] p-2 ' type='email' value={formData.email}/>
+            <Input onChange={(e)=> setFormData({...formData,email:e.target.value})} className='border rounded-[5px] w-[572px] p-2  border-gray-300' type='email' value={formData.email}/>
 
 
  {errorMesej.password && (
                   <span className='bg-red-400 text-white border p-2'>{errorMesej.password}</span>
             )}
              <Label>Password</Label>
-            <Input onChange={(e)=>setFormData({...formData,password:e.target.value})} className='border rounded-[5px] w-[572px] p-2' type='password' value={formData.password}/>
+            <Input onChange={(e)=>setFormData({...formData,password:e.target.value})} className='border rounded-[5px] w-[572px] p-2 border-gray-300' type='password' value={formData.password}/>
 
 
         <div className='flex justify-between  px-3 border-b border-gray-300 py-5'>
