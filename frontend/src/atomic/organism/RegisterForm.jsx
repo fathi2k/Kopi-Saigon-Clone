@@ -96,7 +96,7 @@ const handleSubmit = async ()=>{
           
 
           <div >
-            <button className='bg-[#0BBC5C] p-2 text-white'>Login</button>
+            <button className='bg-[#0BBC5C] p-2 text-white rounded-[5px]'>Login</button>
           </div>
             
         </div>

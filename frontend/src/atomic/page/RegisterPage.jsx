@@ -16,12 +16,12 @@ const navigate = useNavigate();
   return (
 
     
-    <div className='bg-[#f0f0f0] h-screen flex justify-center items-center'>
+    <div className='bg-[#f0f0f0] h-screen flex justify-center items-center '>
 
 
-                <div className='flex flex-col   items-center py-3 bg-white rounded-2xl'>
+                <div className='flex flex-col   items-center py-7 bg-white rounded-2xl '>
                           {/* logo */}
-                          <div className='my-5'>
+                                                               <div className='my-5'>
                             <img className='h-10' src="http://kopisaigon.com/wp-content/uploads/2025/08/cropped-LOGO-PNG-KOPI-SAIGON-__.png" alt="" />
                           </div>
 
@@ -35,7 +35,7 @@ const navigate = useNavigate();
                                      
                                 </div>
 
-                                <div onClick={()=> navigate('/login')} className='flex border px-2 items-center cursor-pointer rounded-[5px] border-gray-300 gap-2'>
+                                <div onClick={()=> navigate('/login')} className='flex border px-2 items-center cursor-pointer rounded-[5px] border-gray-300 gap-2 '>
                                   <AiOutlineUserAdd />
                                   <h1>Login</h1>
                                 </div>
