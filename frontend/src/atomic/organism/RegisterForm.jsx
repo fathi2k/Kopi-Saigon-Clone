@@ -90,7 +90,7 @@ const handleSubmit = async ()=>{
         <div className='flex justify-between '>
           <div className='flex items-center gap-2'>
               <input type='checkbox' />
-              <h1>Remember me.</h1>
+              <h1>Remember me</h1>
           </div>
 
           
